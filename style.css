@@ -154,3 +154,40 @@ body:after{
         linear-gradient(90.5deg, #fff0 0 11.5vmin, #0c2620 calc(11.5vmin + 1px) 100%),
         linear-gradient(90deg, #1c4c3f calc(1.5vmin + 1px) 100%),
 }
+
+.door{
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from 180deg at 19% 50.5%, #fff0 0 0.5deg, #16372e 0.75deg 85deg, #fff0 85.75deg 100%),
+    conic-gradient(from 180deg at 21% 50.5%, #fff0 0 0.5deg, #1b473b 0.75deg 85deg, #fff0 85.75deg 100%),
+    conic-gradient(from 180deg at 22% 50%, #fff0 0 0.5deg, #010e0b 0.75deg 110deg, #fff0 110.75deg 100%),
+    conic-gradient(from 180deg at 39% 48%, #fff0 0 0.5deg, #0e2a21 0.75deg 110deg, #fff0 110.75deg 100%),
+    conic-gradient(from 180deg at 49% 45%, #fff0 0 0.5deg, #337363 0.75deg 112deg, #fff0 112.75deg 100%),;
+}
+
+
+
+.cinema, .effect{
+    width: 98vmin;
+    height: 73.5vmin;
+    filter: blur(0.45px) drop-shadow(0px 0px 0px #fff1);
+    z-index: 2;
+}
+
+.effect{
+    background-color: #0002;
+}
+
+.cinema:after, .effect:after{
+    content: '';
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 100px;
+    opacity: 0.5;
+    -webkit-animation: cinema-scratch 0.45s steps(1) infinite;
+    animation: cinema-scratch 0.45s steps(1) infinite;
+    background: repeating-linear-gradient(90deg, #fff3 1px, transparent 2px 37vmin);
+}
